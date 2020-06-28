@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %} - DOI</title>
+<!--<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<nav>
+    <h1>DOI</h1>
+
+</nav>
+<section class="content">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    <head>
+    <style>
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th,td {
+        padding: 15px;}
+        tr:nth-child(even) {background-color: #f2f2f2;}
+        .text {
+                display: block;
+                width: 100px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+</style>
+</head>
+
+    {% block content %}{% endblock %}
+</section>
